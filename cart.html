@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="images/logo.jpg">
+    <title>MonaSneaker</title>
+
+    <!-- ================================================================================================== -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- ================================================================================================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <!-- ================================================================================================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <!-- ================================================================================================== -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- ================================================================================================== -->
+    <link rel="stylesheet" href="css/home.css">
+    <!-- ================================================================================================== -->
+    <style>
+        body {
+            font-size: 0.9em;
+            margin: 0;
+            padding: 0;
+        }
+
+        .owl-carousel .owl-item img {
+            width: 65%;
+        }
+
+        i {
+            cursor: pointer;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        /* Profile edit */
+        .menu-drop ul li {
+            font-size: 12px;
+            padding: 5px;
+        }
+
+        .menu-drop ul li i {
+            padding-right: 15px;
+        }
+
+        .menu-drop ul li:hover {
+            cursor: pointer;
+            background-color: tan;
+        }
+
+        .liactive {
+            background-color: tan;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ========================================= Header Content ============================================== -->
+    <!-- Header -->
+    <header>
+        <div class="header-wrapper">
+            <div class="header-top">
+                <div class="bar-inner container">
+                    <div class="logo">
+                        <img src="images/logo-mona.png" alt="">
+                    </div>
+                    <div class="bar-action">
+                        <div class="search"></div>
+                        <div class="cart" id="btn-cart">
+                            <i class="fab fa-opencart fa-2x"></i>
+                            <!-- <div class="cart-quantity text-info" id="cart-quantity"></div> -->
+                        </div>
+                        <div class="cart-overlay row" id="cart-overlay">
+                            <div class="row" style="height: 100%;">
+                                <div class="col-8" id="close-cart"></div>
+                                <div class="cart-content col-4">
+                                    <h5 class="text-center mt-3 text-dark">Giỏ Hàng</h5>
+                                    <table class="table table-borderless">
+                                        <tbody id="cart-tbody">
+                                            <!-- Insert Data Here -->
+                                        </tbody>
+                                    </table>
+                                    <div>
+                                        <h5 class="text-dark" id="total"></h5>
+                                    </div>
+                                    <button type="button" class="btn btn-outline-warning float-right btn-sm"
+                                        id="checkout">Đi
+                                        Đến Giỏ Hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End -->
+
+    <!-- ========================================= Body Content ============================================== -->
+    <div class="body-content" id="body-content">
+        <div class="cart-wrapper pb-5 pt-4" id="body-cart">
+            <div class="container">
+                <div class="row">
+                    <div class="col-8">
+                        <h4>Thông Tin Sản Phẩm</h4>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col" colspan="2">SẢN PHẨM</th>
+                                    <th scope="col">GIÁ</th>
+                                    <th scope="col">SỐ LƯỢNG</th>
+                                    <th scope="col">TỔNG</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody id="cart-table">
+                                <!-- Insert Data -->
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="6">
+                                        <a href="index.html">
+                                            <button type="button" class="btn btn-primary btn-sm">Tiếp tục xem sản
+                                                phẩm</button>
+                                        </a>
+                                        <button type="button" class="btn btn-secondary btn-sm">Cập nhật giỏ
+                                            hàng</button>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+
+                    </div>
+                    <div class="col-4">
+                        <h4>Thông Tin Thanh Toán</h4>
+                        <div class="order-info bg-light p-2 border border-danger mb-2">
+                            <div class="row" id="payment-info" ></div>
+                        </div>
+                        <div class="pay-info" id="customer-form">
+                            <h5>Thông tin giao hàng</h5>
+                            <div class="form-group">
+                                <label for="customer-name">Tên: </label>
+                                <input type="text" class="form-control" id="customer-name" placeholder="Tên">
+                            </div>
+                            <div class="form-group">
+                                <label for="customer-number">Số Điện Thoại: </label>
+                                <input type="text" class="form-control" id="customer-number"
+                                    placeholder="Số Điện Thoại">
+                            </div>
+                            <div class="form-group">
+                                <label for="customer-email">Email: </label>
+                                <input type="email" class="form-control" id="customer-email" placeholder="Email">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-sm btn-block" id="order">Đặt
+                                Hàng</button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <section class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 ">
+                    <div class="text-center text-white">
+                        &copy; 2019 Your Company. All Rights Reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- <script>
+        var owl = $('.owl-carousel');
+        owl.owlCarousel({
+            items: 4,
+            loop: true,
+            margin: 10,
+            autoplay: true,
+            autoplayTimeout: 1000,
+            autoplayHoverPause: true
+        });
+    </script> -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="js/home.js"></script>
+</body>
+
+</html>
