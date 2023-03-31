@@ -17,7 +17,6 @@ body {
 
 /*============================ [Header] ============================*/
 header {
-    background-color: #D2D6DF;
     text-transform: uppercase;
     font-weight: 600;
     font-size: 14px;
@@ -119,7 +118,43 @@ header {
     color: #fff;
     background-position: right;
 }
-
+.fa-cart-shopping:hover {
+    color: #00d629;
+}
+/* Go to Cart Button  */
+.openCart {
+    background-color: #000000;
+    padding-top: 20px;
+}
+.openCart h5 {
+    text-align: center;
+    font-size: 25px;
+    color: #00d629;
+    margin-left: 20px;
+}
+.openCart button {
+    background-color: #00d629;
+}
+.openCart button:hover {
+    background-color: #43ef63;
+}
+.openCart button:focus {
+    box-shadow: 0 0 0 0.25rem rgb(0 214 41 / 25%);
+}
+.openCart_body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 20px;
+}
+.openCart_body .btn_openCart {
+    border: #00d629 1px solid;
+    color: #00d629;
+}
+.openCart_body .btn_openCart:hover {
+    background-color: #00d629;
+    color: #000000;
+}
 /* header-bottom */
 .header-bottom {
     height: 45px;
@@ -164,73 +199,6 @@ header {
     width: 100%;
     height: 100px;
 }
-/*========================= [Banner Product] =======================*/
-.banner-content .banner-card {
-    box-sizing: border-box;
-    position: relative;
-}
-
-.banner-content .banner-card:hover {
-    cursor: pointer;
-    border: 1px solid black;
-}
-.banner-content .banner-card:hover .btn-overlay{
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-}
-.banner-content .banner-card .btn-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    overflow: hidden;
-    /* background-color: #008CBA;   */
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    -webkit-transform: scale(0);
-    -ms-transform: scale(0);
-    transform: scale(0);
-    -webkit-transition: .3s ease;
-    transition: .3s ease;
-}
-
-
-/*======================= [Section Product] =====================*/
-.tabbed-content {
-    width: 100%;
-    height: 50px;
-    border-bottom: seagreen 1px solid;
-}
-.tabbed-content ul {
-    height: 100%;
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    align-self: center;
-}
-.tabbed-content ul li {
-    width: 200px;
-    height: 100%;
-    text-align: center;
-    line-height: 50px;
-    cursor: pointer;
-}
-.tabbed-content ul li:hover {
-    background-color: salmon;
-    border-bottom: 1px solid red;
-}
-#extra-product .card:hover {
-    border: 1px solid red;
-    cursor: pointer;
-    -webkit-box-shadow: 0 10px 6px -6px #777;
-       -moz-box-shadow: 0 10px 6px -6px #777;
-            box-shadow: 0 10px 6px -6px #777;
-}
-/*==================================================================*/
 /*======================= [FILTER Product] =====================*/
 .filter_select {
     display: flex;
@@ -245,26 +213,7 @@ header {
 .btn_search-filter button{
     width: 200px;
 }
-/*======================= [PR0M0TI0N Product] =====================*/
-.promotion .promotion-banner {
-    position: relative;
-}
-.promotion .promotion-banner .promotion-content-banner {
-    position: absolute;
-    top: 35%;
-    left: 32%;
-}
-.promotion .promotion-banner .promotion-content-banner .content-banner {
-    text-align: center;
-}
-.promotion .promotion-banner .promotion-img-banner {
-    width: 100%;
-    height: 500px;
-    background-image: url("http://mauweb.monamedia.net/converse/wp-content/uploads/2019/05/banner-1.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: auto;
-}
+
 
 /*======================= [ALL Product] =====================*/
 .all-product {
@@ -277,15 +226,29 @@ header {
 .all-product .demo-product .one-product p {
     margin: 0;
 }
+#all-product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#all-product .card {
+    width: 300px;
+    height: 400px !important;
+}
+#all-product .card img {
+    margin-bottom: 30px;
+}
 .all-product .card .card-title {
-    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 25px;
 }
 .all-product .card .card-text {
-    font-size: 13px;
+    font-size: 18px;
 }
 .all-product .card button {
     font-size: 12px;
-    height: 30px;
+    height: 24px;
 }
 .all-product .card:hover {
     border: 1px solid rgba(0, 0, 0, 0.2);
@@ -374,7 +337,17 @@ footer .input-group-addon {
 .copyright {
     background-color: #111;
     padding: 12px 0;
-    font-size:14px;
+    font-size: 14px;
+    font-weight: 100;
+}
+.copyright_cart {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: #111;
+    padding: 12px 0;
+    font-size: 14px;
+    font-weight: 100;
 }
 
 
@@ -397,6 +370,9 @@ footer .input-group-addon {
 }
 .modal-header button:hover {
     background-color: #43ef63;
+}
+.modal-header button:focus {
+    box-shadow: 0 0 0 0.25rem rgb(0 214 41 / 25%);
 }
 .item_info-outer {
     display: flex;
@@ -472,4 +448,44 @@ footer .input-group-addon {
     box-shadow: 0 0 0 0.2rem rgb(0 214 41 / 50%);
 }
 
+/* Item Policy */
+.item_info-policy {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: #00d629 1px solid;
+    border-radius: 20px;
+}
+.item_info-policy .item_policy {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 16px;
+}
+.item_info-policy .item_policy:last-child {
+    margin-bottom: 0px;
+}
+.item_info-policy .item_policy img {
+    height: 35px;
+    margin-right: 20px;
+    /* position: absolute;
+    left: 0; */
+}
+.item_info-policy .item_policy p {
+    margin: 0 0;
+}
 
+
+/* Button Order Sneaker */
+.btn_order {
+    background-color: #000000;
+    color: #00d629;
+    border: 1px solid #000000;
+}
+.btn_order:hover {
+    background-color: rgb(0, 214, 41);
+    color: #000000;
+}
+.btn_order:focus {
+    box-shadow: 0 0 0 0.2rem rgb(0 214 41 / 50%);
+}

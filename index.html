@@ -51,7 +51,7 @@
             <div class="header-top">
                 <div class="bar-inner container">
                     <div class="logo">
-                        <img src="images/logo.png" alt="">
+                        <a href="http://127.0.0.1:5500/index.html"><img src="images/logo.png" alt=""></a>
                     </div>
                     <div class="input-group search_bar">
                         <input type="text" class="form-control" placeholder="Search" name="search" aria-label="Search"
@@ -61,27 +61,21 @@
                     </div>
                     <div class="bar-action">
                         <div class="search"></div>
-                        <div class="cart" id="btn-cart">
+                        <div class="cart" id="btn-cart" data-bs-toggle="offcanvas" data-bs-target="#openCartRight"
+                            aria-controls="openCartRight">
                             <i class="fa-solid fa-cart-shopping fa-2x"></i>
                             <!-- <div class="cart-quantity text-info" id="cart-quantity"></div> -->
                         </div>
-                        <div class="cart-overlay row" id="cart-overlay">
-                            <div class="row" style="height: 100%;">
-                                <div class="col-8" id="close-cart"></div>
-                                <div class="cart-content col-4">
-                                    <h5 class="text-center mt-3 text-dark">Giỏ Hàng</h5>
-                                    <table class="table table-borderless">
-                                        <tbody id="cart-tbody">
-                                            <!-- Insert Data Here -->
-                                        </tbody>
-                                    </table>
-                                    <div>
-                                        <h5 class="text-dark" id="total"></h5>
-                                    </div>
-                                    <a href="http://127.0.0.1:5502/cart.html" type="button"
-                                        class="btn btn-outline-warning float-right btn-sm" id="checkout">Đi
-                                        Đến Giỏ Hàng</a>
-                                </div>
+                        <div class="offcanvas offcanvas-end openCart" tabindex="-1" id="openCartRight"
+                            aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas-header">
+                                <h5 id="offcanvasRightLabel">List Of Your Sneakers</h5>
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="openCart"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body openCart_body">
+                                <a href="http://127.0.0.1:5500/cart.html" type="button"
+                                        class="btn btn_openCart float-right btn-sm" id="checkout">Go to Cart</a>
                             </div>
                         </div>
                     </div>
@@ -93,7 +87,7 @@
                     <div class="menu-bar">
                         <ul>
                             <li>
-                                <a href="">HOME PAGE</a>
+                                <a href="http://127.0.0.1:5500/index.html">HOME PAGE</a>
                             </li>
                             <li>
                                 <a href="">INTRODUCTION</a>
@@ -102,7 +96,7 @@
                                 <a href="#allProducts">SNEAKERS</a>
                             </li>
                             <li>
-                                <a href="#extraProducts">OTHER</a>
+                                <a href="">OTHER</a>
                             </li>
                             <li>
                                 <a href="">NEWS</a>
@@ -350,8 +344,28 @@
                                     <button type="button" class="btn btn-danger btn_close-modal "
                                         data-bs-dismiss="modal">Close</button>
                                 </div>
-                                <!-- <button type="button" class="btn btn-primary">Add To Cart</button>
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                            </div>
+                        </div>
+                        <div class="item_info-policy">
+                            <div class="item_policy">
+                                <img src="https://bizweb.dktcdn.net/100/292/624/themes/758446/assets/policy_images_1.svg"
+                                    alt="INSPECTION AND PAYMENT ON RECEIVED">
+                                <p>INSPECTION AND PAYMENT ON RECEIVED</p>
+                            </div>
+                            <div class="item_policy">
+                                <img src="https://bizweb.dktcdn.net/100/292/624/themes/758446/assets/policy_images_2.svg"
+                                    alt="NATIONWIDE DELIVERY">
+                                <p>NATIONWIDE DELIVERY</p>
+                            </div>
+                            <div class="item_policy">
+                                <img src="https://bizweb.dktcdn.net/100/292/624/themes/758446/assets/policy_images_3.svg"
+                                    alt="SNEAKERS: 3 YEARS WARRANTY">
+                                <p>SNEAKERS: 3 YEARS WARRANTY</p>
+                            </div>
+                            <div class="item_policy">
+                                <img src="https://bizweb.dktcdn.net/100/292/624/themes/758446/assets/policy_images_4.svg"
+                                    alt="EXCHANGE IN 33 DAYS">
+                                <p>EXCHANGE IN 33 DAYS</p>
                             </div>
                         </div>
                     </div>
@@ -363,7 +377,7 @@
 
     <footer class="pt-5 pb-4" id="contact">
         <div class="container">
-            <h5 class="mb-4 font-weight-bold">CONNECT WITH US</h5>
+            <h5 class="mb-4">CONNECT WITH US</h5>
             <div class="input-group search_bar">
                 <input type="text" class="form-control" placeholder="Your Email Address" name="search_email"
                     aria-label="Search" aria-describedby="button-addon2">
@@ -384,7 +398,7 @@
             <div class="row">
                 <div class="col-md-12 ">
                     <div class="text-center text-white">
-                        &copy; 2019 Your Company. All Rights Reserved.
+                        &copy; 2022 Your Company. All Rights Reserved.
                     </div>
                 </div>
             </div>
